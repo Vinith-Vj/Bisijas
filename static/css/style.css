@@ -2341,7 +2341,7 @@ figcaption p {
   top: 70%;
   background: white;
   border: 1px solid #0000001f;
-  height: 66%;
+  height: 70%;
   width: 80%;
   padding: 20px;
   left: 10%;
@@ -2350,11 +2350,11 @@ figcaption p {
 
 @media (max-width: 767px) {
   .vision-mission {
-    gap: 170px;
+    gap: 180px;
   }
 
   .vision-desc {
-    height: 77%;
+    height: 80%;
   }
 }
 
@@ -2475,6 +2475,17 @@ figcaption p {
   margin-top: 20px;
   width: 100%;
   border-radius: 10px;
+}
+
+.services-container {
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+@media (max-width: 767px) {
+  .services-container {
+    flex-wrap: wrap;
+  }
 }
 
 .service-card {
