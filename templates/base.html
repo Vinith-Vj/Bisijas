@@ -1,0 +1,215 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    
+    <!--====== Title ======-->
+    <title>TraveLand - Tour and Travel Agency Template</title>
+    
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href='{% static "images/fav-icon.png" %}' type="image/png">
+        
+        
+    <!--====== Animate CSS ======-->
+    <link rel="stylesheet" href='{% static "css/animate.css" %}'>
+        
+    <!--====== Nice Select CSS ======-->
+    <link rel="stylesheet" href='{% static "css/nice-select.css" %}'>
+        
+        
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href='{% static "css/LineIcons.2.0.css" %}'>
+        
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href='{% static "css/bootstrap.4.5.2.min.css" %}'>
+    
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href='{% static "css/default.css" %}'>
+    
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href='{% static "css/style.css" %}'>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    
+</head>
+
+<body>
+    <section class="header_area">
+        <div class="header_navbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="">
+                                <img class="nav-logo" src='{% static "images/Travel Agency.png" %}'  alt="Logo">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ml-auto">
+                                    <li class="nav-item {% if request.path == '/' %}active{% endif %} ">
+                                        <a class="page-scroll" href="\">Home</a>
+                                    </li>
+                                    <li class="nav-item {% if request.path == '/aboutus' %}active{% endif %}">
+                                        <a class="page-scroll" href="aboutus">About</a>
+                                    </li>
+                                    <li class="nav-item {% if request.path == '/packages' %}active{% endif %}">
+                                        <a class="page-scroll" href="packages">Packages</a>
+                                    </li> 
+                                    {% comment %} <li class="nav-item">
+                                        <a class="page-scroll" href="#services">Services</a>
+                                    </li> {% endcomment %}
+                                    <li class="nav-item {% if request.path == '/gallery' %}active{% endif %}">
+                                        <a class="page-scroll" href="gallery">Gallery</a>
+                                    </li>
+                                    {% comment %} <li class="nav-item">
+                                        <a class="page-scroll" href="#blog">Blog</a>
+                                    </li> {% endcomment %}
+                                    <li class="nav-item {% if request.path == '/contactus' %}active{% endif %}">
+                                        <a class="page-scroll" href="contactus">Contact</a>
+                                    </li>
+                                </ul>
+                            </div> <!-- navbar collapse -->
+                        </nav> <!-- navbar -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- header navbar -->
+
+        <div id="home" class="header_slider">
+            <div class="base_slider bg_cover d-flex align-items-center" style="background-image: url('{% static "images/hero-area.jpg" %}'); height: 30vh;">
+            
+                {% block title %}{% endblock title %}
+            </div>
+            
+        </div>
+
+        <div class="fixed-telephone">
+            <a href="tel:+918137824212" target="_blank" style="text-decoration: none; color: inherit;">
+                <i class="fa-solid fa-phone"></i>
+            </a>
+        </div>
+    
+        <div class="fixed-whatsapp">
+            <a href="https://wa.me/9746424213" target="_blank" style="text-decoration: none; color: inherit;">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+
+    </section>
+
+        {% block content %}
+
+        {% endblock %}
+
+
+    <section id="footer" class="footer_area">
+        <div class="footer_widget pt-80 pb-130">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 order-md-1 order-lg-1">
+                        <div class="footer_about mt-50">
+                            <a href=""><img src='{% static "images/Travel Agency.png" %}' alt="logo" style="height: 70px;"></a>
+                            <p>At Bisijas Royal Tours, we are passionate about making your travel dreams come true.
+                                Whether you're planning a quick getaway or a grand adventure, let us be your trusted travel
+                                partner. Explore the world with us and create memories that will last a lifetime</p>
+                            <ul class="social">
+                                <li><a class="social_1" href="javascript:void(0)"><i class="fa-brands fa-facebook-f" style="font-size: 20px;"></i></a></li>
+                                {% comment %} <li><a class="social_2" href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li> {% endcomment %}
+                                <li><a class="social_3" href="https://www.instagram.com/bisijasroyaltours?igsh=a3N1OXo1a3d3enQ2"><i class="lni lni-instagram-original"></i></a></li>
+                            <li><a class="social_4" href="https://wa.me/9746424213"><i class="fa-brands fa-whatsapp"></i></a></li>
+                            </ul>
+                        </div> <!-- footer about -->
+                    </div>
+                    <div class="col-lg-6 col-md-12 order-md-3 order-lg-2">
+                        <div class="footer_link_wrapper d-flex flex-wrap">
+                            <div class="footer_link mt-45">
+                                <h4 class="footer_title">Quick Link</h4>
+                                <ul class="link">
+                                    <li><a href="\">Home</a></li>
+                                    <li><a href="aboutus">About</a></li>
+                                    <li><a href="packages">Pacakges</a></li>
+                                    <li><a href="gallery">Gallery</a></li>
+                                    <li><a href="contactus">Contact</a></li>
+                                </ul>
+                            </div> <!-- footer link -->
+                            <div class="footer_link mt-45">
+                                <h4 class="footer_title">Support</h4>
+                                <ul class="link">
+                                    <li><a href="javascript:void(0)">Customer Support</a></li>
+                                    <li><a href="javascript:void(0)">Privacy & Policy</a></li>
+                                    <li><a href="javascript:void(0)">Terms & Condition</a></li>
+                                    <li><a href="javascript:void(0)">Forum</a></li>
+                                    <li><a href="javascript:void(0)">Tour Guide</a></li>
+                                </ul>
+                            </div> <!-- footer link -->
+                        </div> <!-- footer link wrapper -->
+                    </div>
+                    {% comment %} <div class="col-lg-4 col-md-6 order-md-2 order-lg-3">
+                        <div class="footer_subscribe mt-45">
+                            <h4 class="footer_title">Subscribe Newsletter</h4>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadip scing elitr, sed diam.</p>
+                            <div class="subscribe_form">
+                                <form action="#">
+                                    <input type="text" placeholder="Enter email">
+                                    <button><i class="lni lni-arrow-right"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div> {% endcomment %}
+                </div> <!-- row -->
+            </div> <!-- container -->
+            <p class="text-center mt-90">Copyright © 2025 All rights reserved | Designed by  <a style="color: white;" href="https://www.inspirezesttechnologies.com/">InspireZest Technologies Pvt Ltd</a></p>
+        </div> <!-- footer widget -->
+    </section>
+
+
+
+<!--====== Jquery js ======-->
+    <script src='{% static "js/vendor/jquery-1.12.4.min.js" %}'></script>
+    <script src='{% static "js/vendor/modernizr-3.7.1.min.js" %}'></script>
+    
+    <!--====== Bootstrap js ======-->
+    <script src='{% static "js/popper.min.js" %}'></script>
+    <script src='{% static "js/bootstrap.4.5.2.min.js" %}'></script>
+
+    
+    <!--====== Scrolling Nav js ======-->
+    <script src='{% static "js/jquery.easing.min.js" %}'></script>
+    <script src='{% static "js/scrolling-nav.js" %}'></script>
+    
+    <!--====== Counter Up js ======-->
+    <script src='{% static "js/waypoints.min.js" %}'></script>
+    <script src='{% static "js/jquery.counterup.min.js" %}'></script>
+    
+    <!--====== Nice Select js ======-->
+    <script src='{% static "js/jquery.nice-select.min.js" %}'></script>
+    
+    <!--====== WOW js ======-->
+    <script src='{% static "js/wow.min.js" %}'></script>
+    
+    <!--====== Main js ======-->
+    <script src='{% static "js/main.js" %}'></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 120,
+      });
+    </script>
+    
+
+
+
+</body>

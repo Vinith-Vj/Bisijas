@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+
+
+
+{% block title %}
+<div class="about_title">
+    <h2>About US</h2>
+</div>
+{% endblock title %}
+
+{% block content %}
+{% load static %}
+<section id="about" class="about_area pb-130">
+    <div class="about_wrapper">
+        <div class="about_image bg_cover" style="background-image: url('{% static 'images/about_image.jpg' %}')" data-aos="fade-right" data-aos-duration="800"></div> <!-- about image -->
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-lg-6">
+                    <div class="about_content">
+                        <div class="section_title">
+                            {% comment %} <h3 class="title" data-aos="fade-down" data-aos-duration="800">About Us <br> <span></span></h3> {% endcomment %}
+                            <p class="about_p" data-aos="fade-left">Welcome to Bisijas Royal Tours, your gateway to unforgettable travel experiences. At
+                                Bisijas Royal Tours, we believe that travel is not just about visiting new places but about
+                                creating memories that last a lifetime. Established with a passion for exploration and a
+                                commitment to excellence, we specialize in offering both package tours and customized tour
+                                packages tailored to meet your unique travel desires.</p>
+                        </div> <!-- section title -->
+                        <a href="javascript:void(0)" class="main-btn" data-aos="slide-left" data-aos-duration="800">Read More</a>
+                    </div> <!-- about content -->
+                    <div class="about_counter d-flex flex-wrap">
+                        <div class="single_counter counter_1 d-flex justify-content-center align-items-center wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                            <div class="counter_wrapper">
+                                <span class="counter">534</span>
+                                <p>Trips Done</p>
+                            </div> <!-- single wrapper -->
+                        </div> <!-- single counter -->
+                        
+                        <div class="single_counter counter_2 d-flex justify-content-center align-items-center wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                            <div class="counter_wrapper">
+                                <span class="counter">424</span>
+                                <p>Corporate Clients</p>
+                            </div> <!-- single wrapper -->
+                        </div> <!-- single counter -->
+                        
+                        <div class="single_counter counter_2 d-flex justify-content-center align-items-center wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="0.8s">
+                            <div class="counter_wrapper">
+                                <span class="counter">35</span>
+                                <p>Visited Countries</p>
+                            </div> <!-- single wrapper -->
+                        </div> <!-- single counter -->
+                        
+                        <div class="single_counter counter_1 d-flex justify-content-center align-items-center wow fadeInUpBig" data-wow-duration="1.3s" data-wow-delay="1.1s">
+                            <div class="counter_wrapper">
+                                <span class="counter">15</span>
+                                <p>Team Members</p>
+                            </div> <!-- single wrapper -->
+                        </div> <!-- single counter -->
+                    </div> <!-- about_counter -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </div> <!-- about wrapper -->
+</section>
+
+<div class="container mt-50">
+
+    <div class="row">
+        <div class="col-lg-6 col-sm-12 pr-35 mb-80 ">
+            <div class="why_img" data-aos="fade-down-right" data-aos-duration="800">
+                <img src="{% static "images/img-3.jpeg" %}" alt="">
+            </div>
+
+            <div class="why_img_2" data-aos="fade-up-left" data-aos-duration="800">
+                <img src="{% static "images/img-3.jpeg" %}" alt="">
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-sm-12">
+            <div class="why_content d-flex flex-column justify-content-center">
+                <h2 class="text-center mb-30" data-aos="fade-down" data-aos-duration="800">Why Choose Us?</h2>
+                <div class="d-flex flex-column gap-5 why_contents">
+                    <div data-aos="slide-down" data-aos-duration="800">
+                    <h4>Expert Knowledge:</h4>
+                        <p>
+                            Our team of travel experts has extensive knowledge and
+                            firsthand experience of various destinations, ensuring you receive the best travel
+                            advice and recommendations
+                        </p>
+                    </div>
+
+                    <div data-aos="slide-down" data-aos-duration="800">
+                        <h4>Personalized Service: </h4>
+                        <p>
+                            We pride ourselves on offering personalized service to each of our clients. Your satisfaction is our top priority
+                        </p>
+                    </div>
+
+                    <div data-aos="slide-down" data-aos-duration="800">
+                        <h4>Affordable Luxury:</h4>
+                        <p>
+                            Enjoy luxury travel experiences at prices that won't break the
+                            bank. We strive to provide exceptional value for money without compromising on
+                            quality
+                        </p>
+                    </div>
+
+                    <div data-aos="fade-down" data-aos-duration="800">
+                        <h4>Seamless Travel:</h4>
+                        <p>
+                            From the moment you book with us to the time you return home, we ensure a seamless travel experience. We are with you every step of the way
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="container mt-50">
+    <div class="row">
+        <div class="col-6 vision">
+            <div class="section_title text-center pb-25">
+                <h3 class="title" data-aos="slide-down" data-aos-duration="800">Our Vision</h3>
+                <p style="text-align: left;" data-aos="zoom-in" data-aos-duration="800">To become India’s leading tour management company by fostering trust, innovation, and sustainability, creating unforgettable travel experiences that inspire and redefine exploration within the next decade.</p>
+            </div>
+        </div>
+        <div class="col-6 vision-img" data-aos="fade-down" data-aos-duration="800">
+            <img src="{% static "images/Vision-2.jpeg" %}" alt="">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6 vision-img" data-aos="fade-down" data-aos-duration="800">
+            <img src="{% static "images/target-2.jpeg" %}" alt="">
+        </div>
+        <div class="col-6 vision">
+            <div class="section_title text-center pb-25">
+                <h3 class="title" data-aos="slide-down" data-aos-duration="800">Our Mission</h3>
+                <p style="text-align: left;" data-aos="zoom-in" data-aos-duration="800">To provide travel enthusiasts with tailored solutions, exceptional customer care, and innovative services, ensuring seamless, memorable, and transformative journeys that exceed expectations at every step. </p>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+{% endblock  %}

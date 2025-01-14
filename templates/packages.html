@@ -1,0 +1,175 @@
+{% extends "base.html" %}
+
+{% block title %}
+<div class="about_title">
+    <h2>Packages</h2>
+</div>
+{% endblock title %}
+
+{% block content %}
+{% load static %}
+
+<section style="background-color: #babaf95e">
+    <div class="container mb-80">
+        {% comment %} <div class="d-flex flex-column" style="gap: 100px;">
+            <div class="packages d-flex mt-lg-80 mt-sm-20">
+                <div class="package_img" data-aos="slide-right" data-aos-duration="800">
+                    <img src="{% static "images/Dubai.jpeg" %}" alt="">
+                </div>
+                <div class="package_desc" data-aos="fade-down" data-aos-duration="800">
+                    <h4>Enchanting Dubai</h4>
+                    <p>
+                        Discover the luxury and adventure of Dubai with our Dubai tour packages. Explore iconic landmarks, shopping, and desert safaris. call now!
+                    </p>
+                    <br>
+                    <a href="https://wa.me/9746424213" class="main-btn wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.8s">Book Now</a>
+                </div>
+            </div>
+
+            <div class="packages d-flex justify-content-end">
+                
+                <div class="package_desc1" data-aos="slide-right" data-aos-duration="800">
+                    <h4>Wonderful Bali</h4>
+                    <p>
+                        The island of Gods is calling you to take a spiritual breath from its heart. If you want to explore the spirituality and calmness of Bali in depth, our Bali tour package is your ultimate solution. call now!
+                    </p>
+                    <br>
+                    <a href="https://wa.me/9746424213" class="main-btn wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.8s">Book Now</a>
+                </div>
+                <div class="package_img" data-aos="fade-down" data-aos-duration="500">
+                    <img src="{% static "images/Bali.jpeg" %}" alt="">
+                </div>
+            </div>
+
+            <div class="packages d-flex">
+                <div class="package_img" data-aos="slide-right" data-aos-duration="800">
+                    <img src="{% static "images/Thailand.jpeg" %}" alt="">
+                </div>
+                <div class="package_desc" data-aos="fade-down" data-aos-duration="800">
+                    <h4>Amazing Thailand</h4>
+                    <p>
+                        One of the most relaxing and enjoyable tour one can head out might be a Thailand tour. Our Thailand tour package is no Exception. You can experience the essence of Thailand with our 05-day tour package. call now!
+                    </p>
+                    <br>
+                    <a href="https://wa.me/9746424213" class="main-btn wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.8s">Book Now</a>
+                </div>
+            </div>
+
+            <div class="packages d-flex justify-content-end">
+                
+                <div class="package_desc1" data-aos="slide-right" data-aos-duration="800">
+                    <h4>Garden City of Singapore And Malaysia</h4>
+                    <p>
+                        Set off on a spectacular 6-day journey to Singapore and Malaysia in 2025! Discover the Petronas Towers, Universal Studios, and more. Secure your spot for an unforgettable experience
+                    </p>
+                    <br>
+                    <a href="https://wa.me/9746424213" class="main-btn wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.8s">Book Now</a>
+                </div>
+                <div class="package_img" data-aos="fade-down" data-aos-duration="500">
+                    <img src="{% static "images/Garden.jpeg" %}" alt="">
+                </div>
+            </div>
+
+            <div class="packages d-flex">
+                <div class="package_img" data-aos="slide-right" data-aos-duration="800">
+                    <img src="{% static "images/Vietnam.jpeg" %}" alt="">
+                </div>
+                <div class="package_desc" data-aos="fade-down" data-aos-duration="800">
+                    <h4>Vietnam</h4>
+                    <p>
+                        Vietnam, with its rich cultural heritage and captivating landscapes, is a Southeast Asian gem. From the bustling streets of Hanoi and Ho Chi Minh City to the tranquil beauty of Ha Long Bay and the terraced rice fields of Sapa, Vietnam offers a diverse array of experiences
+                    </p>
+                    <br>
+                    <a href="https://wa.me/9746424213" class="main-btn wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.8s">Book Now</a>
+                </div>
+            </div>
+        </div> {% endcomment %}
+
+        <div class="row">
+            <div class="col-12 hovers">
+                <div class="row single_services mt-50 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                    <div class="services_img col-lg-5 col-sm-12">
+                         <img src='{% static "images/Dubai.jpeg" %}' class="img-fluid w-100 h-100 object-fit-cover" alt="">
+                    </div>
+                    <div class="service_content col-lg-7 col-sm-12">
+                        <h4 class="title">Enchanting Dubai </h4>
+                        <p>Discover the luxury and adventure of Dubai with our Dubai tour packages. Explore
+                            iconic landmarks, shopping, and desert safaris. call now!.</p>
+                            <br>
+                        <a href="https://wa.me/9746424213" class="main-btn wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.8s">Book Now</a>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-12 hovers">
+                <div class="row single_services mt-50 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                    
+                    <div class="service_content col-lg-7 col-sm-12 order-2 order-lg-1">
+                        <h4 class="title">Wonderful Bali</h4>
+                        <p>The island of Gods is calling you to take a spiritual breath from its heart. If you want
+                            to explore the spirituality and calmness of Bali in depth, our Bali tour package is
+                            your ultimate solution. call now!
+                        </p>
+                        <br>
+                        <a href="https://wa.me/9746424213" class="main-btn wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.8s">Book Now</a>
+                    </div>
+                    <div class="services_img col-lg-5 col-sm-12 order-1 order-lg-2">
+                        <img src='{% static "images/Bali.jpeg" %}' class="img-fluid w-100 h-100 object-fit-cover" alt="">
+                   </div>
+                </div> 
+            </div>
+            <div class="col-12 hovers">
+                <div class="row single_services mt-50 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
+                    <div class="services_img col-lg-5 col-sm-12">
+                         <img src='{% static "images/Thailand.jpeg" %}' class="img-fluid w-100 h-100 object-fit-cover" alt="">
+                    </div>
+                    <div class="service_content col-lg-7 col-sm-12">
+                        <h4 class="title">Amazing Thailand</h4>
+                        <p>One of the most relaxing and enjoyable tour one can head out might be a Thailand
+                            tour. Our Thailand tour package is no Exception. You can experience the essence of
+                            Thailand with our 05-day tour package. call now!</p>
+                            <br>
+                        <a href="https://wa.me/9746424213" class="main-btn wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.8s">Book Now</a>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-12 hovers">
+                <div class="row single_services mt-50 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                    
+                    <div class="service_content col-lg-7 col-sm-12 order-2 order-lg-1">
+                        <h4 class="title"> Garden City of Singapore And Malaysia</h4>
+                        <p>Set off on a spectacular 6-day journey to Singapore and Malaysia in 2025! Discover
+                            the Petronas Towers, Universal Studios, and more. Secure your spot for an
+                            unforgettable experience</p>
+                            <br>
+                        <a href="https://wa.me/9746424213" class="main-btn wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.8s">Book Now</a>
+                    </div>
+                    <div class="services_img col-lg-5 col-sm-12 order-1 order-lg-2">
+                         <img src='{% static "images/Garden.jpeg" %}' class="img-fluid w-100 h-100 object-fit-cover" alt="">
+                    </div>
+                </div> 
+            </div>
+            <div class="col-12 hovers">
+                <div class="row single_services mt-50 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
+                    <div class="services_img col-lg-5 col-sm-12">
+                         <img src='{% static "images/Vietnam.jpeg" %}' class="img-fluid w-100 h-100 object-fit-cover" alt="">
+                    </div>
+                    <div class="service_content col-lg-7 col-sm-12">
+                        <h4 class="title">Vietnam</h4>
+                        <p>Vietnam, with its rich cultural heritage and captivating landscapes, is a Southe
+                            ast Asian gem. From the bustling streets of Hanoi and Ho Chi Minh City to the
+                            tranquil beauty of Ha Long Bay and the terraced rice fields of Sapa, Vietnam o
+                            ffers a diverse array of experiences</p>
+                            <br>
+                        <a href="https://wa.me/9746424213" class="main-btn wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.8s">Book Now</a>
+                    </div>
+                </div> 
+            </div>
+            
+        </div>
+    </div>
+
+</section>
+
+{% endblock %}
+
+
