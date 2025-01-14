@@ -10,7 +10,7 @@
 
 {% block content %}
 {% load static %}
-<section id="about" class="about_area pb-130">
+<section id="about" class="about_area pb-130 pb-sm-30">
     <div class="about_wrapper">
         <div class="about_image bg_cover" style="background-image: url('{% static 'images/about_image.jpg' %}')" data-aos="fade-right" data-aos-duration="800"></div> <!-- about image -->
         <div class="container">
@@ -118,29 +118,55 @@
 </div>
 
 <div class="container mt-50 mb-30">
-    <div class="row">
-        <div class="col-6 vision">
+    {% comment %} <div class="row align-items-stretch">
+        <div class="col-6 vision d-flex flex-column">
             <div class="section_title text-center pb-25">
                 <h3 class="title" data-aos="slide-down" data-aos-duration="800">Our Vision</h3>
                 <p style="text-align: left;" data-aos="zoom-in" data-aos-duration="800">To become India’s leading tour management company by fostering trust, innovation, and sustainability, creating unforgettable travel experiences that inspire and redefine exploration within the next decade.</p>
             </div>
         </div>
-        <div class="col-6 vision-img" data-aos="fade-down" data-aos-duration="800">
-            <img src="{% static "images/vision-3.jpg" %}" alt="">
+        <div class="col-6 vision-img d-flex" data-aos="fade-down" data-aos-duration="800">
+            <img src="{% static "images/vision-3.jpg" %}" alt="" class="img-fluid w-100 h-100">
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-6 vision-img" data-aos="fade-down" data-aos-duration="800">
-            <img src="{% static "images/mission-3.jpg" %}" alt="">
+    <div class="row align-items-stretch">
+        <div class="col-6 vision-img d-flex" data-aos="fade-down" data-aos-duration="800">
+            <img src="{% static "images/mission-3.jpg" %}" alt="" class="img-fluid w-100 h-100">
         </div>
-        <div class="col-6 vision">
+        <div class="col-6 vision d-flex flex-column">
             <div class="section_title text-center pb-25">
                 <h3 class="title" data-aos="slide-down" data-aos-duration="800">Our Mission</h3>
                 <p style="text-align: left;" data-aos="zoom-in" data-aos-duration="800">To provide travel enthusiasts with tailored solutions, exceptional customer care, and innovative services, ensuring seamless, memorable, and transformative journeys that exceed expectations at every step. </p>
             </div>
         </div>
         
+    </div> {% endcomment %}
+
+
+
+    <div class="row mb-170 vision-mission">
+        <div class="col-lg-6 col-sm-12">
+            <div class="vision-img" data-aos="fade-down" data-aos-duration="800">
+                <img src="{% static "images/vision-3.jpg" %}" alt="">
+            </div>
+
+            <div class="section_title text-center pb-25 vision-desc" data-aos="fade-down" data-aos-duration="800">
+                <h4 class="title" data-aos="slide-down" data-aos-duration="800">Our Vision</h4>
+                <p style="text-align: left;" data-aos="zoom-in" data-aos-duration="800">To become India’s leading tour management company by fostering trust, innovation, and sustainability, creating unforgettable travel experiences that inspire and redefine exploration within the next decade.</p>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-sm-12">
+            <div class="vision-img" data-aos="fade-down" data-aos-duration="800">
+                <img src="{% static "images/mission-3.jpg" %}" alt="">
+            </div>
+
+            <div class="section_title text-center pb-25 vision-desc" data-aos="fade-down" data-aos-duration="800">
+                <h4 class="title" data-aos="slide-down" data-aos-duration="800">Our Mission</h4>
+                <p style="text-align: left;" data-aos="zoom-in" data-aos-duration="800">To provide travel enthusiasts with tailored solutions, exceptional customer care, and innovative services, ensuring seamless, memorable, and transformative journeys that exceed expectations at every step. </p>
+            </div>
+        </div>
     </div>
 </div>
 

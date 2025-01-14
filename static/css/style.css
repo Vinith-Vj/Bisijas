@@ -2302,7 +2302,7 @@ figcaption p {
   background-color: #dcdcfd7a;
 }
 
-.vision-img {
+/* .vision-img {
   height: 345px;
   padding: 0;
   
@@ -2313,10 +2313,48 @@ figcaption p {
   width: inherit;
 }
 
+.vision-img img {
+  object-fit: cover; 
+  height: 100%;      
+  width: 100%;       
+}
+
 @media (max-width: 767px) {
   .vision-img {
     height: 300px;
     width: 185px;
+  }
+} */
+
+.vision-img {
+  position: relative;
+}
+
+.vision-img img {
+  height: 330px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.vision-desc {
+  position: absolute;
+  top: 70%;
+  background: white;
+  border: 1px solid #0000001f;
+  height: 66%;
+  width: 80%;
+  padding: 20px;
+  left: 10%;
+  border-radius: 10px;
+}
+
+@media (max-width: 767px) {
+  .vision-mission {
+    gap: 170px;
+  }
+
+  .vision-desc {
+    height: 77%;
   }
 }
 
@@ -2416,6 +2454,12 @@ figcaption p {
   flex-direction: column;
   gap: 80px;
   justify-content: space-between;
+}
+
+.link-content {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 @media (max-width: 767px) {
