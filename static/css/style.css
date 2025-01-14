@@ -791,7 +791,7 @@ p {
 
 @media (max-width: 767px) {
   .single_slider {
-    height: 600px;
+    height: 100vh;
     /* border-bottom-left-radius: 85px; */
   }
 }
