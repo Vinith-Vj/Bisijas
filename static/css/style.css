@@ -149,6 +149,7 @@ p {
   -webkit-transition: all 0.4s ease-out 0s;
   transition: all 0.4s ease-out 0s;
   background-color: #0011ff;
+  width: 170px;
 }
 
 .main-btn:hover {
@@ -2031,6 +2032,10 @@ p {
   }
 }
 
+.g-10 {
+  gap: 10px;
+}
+
 .packages {
   width: 100%;
   position: relative;
@@ -2319,7 +2324,7 @@ figcaption p {
   display: flex;
   gap: 20px;
   flex-direction: column;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   padding: 10px;
   border-radius: 10px;
 }
@@ -2398,4 +2403,36 @@ figcaption p {
 
 .hovers:hover {
   transform: scale(1.05);
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: 83px;
+}
+
+.link-loc {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .links {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.contact-img-bottom img {
+  height: 244px;
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.service-card {
+  background-color: #d2d5d95c !important;
+  border-radius: 10px;
 }
