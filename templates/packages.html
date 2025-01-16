@@ -86,7 +86,7 @@
         </div> {% endcomment %}
 
         <div class="row pb-30">
-            <div class="col-12 hovers">
+            {% comment %} <div class="col-12 hovers">
                 <div class="row single_services mt-50 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
                     <div class="services_img col-lg-5 col-sm-12">
                          <img src='{% static "images/Dubai.jpeg" %}' class="img-fluid w-100 h-100 object-fit-cover" alt="">
@@ -163,7 +163,36 @@
                         <a href="https://wa.me/9746424213" class="main-btn wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.8s">Book Now</a>
                     </div>
                 </div> 
-            </div>
+            </div> {% endcomment %}
+
+            {% for package in packages %}
+                <div class="col-12 hovers">
+                    <div class="row single_services mt-50 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                        {% if forloop.counter|divisibleby:2 %}
+                            <div class="service_content col-lg-7 col-sm-12 order-2 order-lg-1">
+                                <h4 class="title">{{ package.title }}</h4>
+                                <p>{{ package.description }}</p>
+                                <br>
+                                <a href="{{ package.booking_link }}" class="main-btn wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.8s">Book Now</a>
+                            </div>
+                            <div class="services_img col-lg-5 col-sm-12 order-1 order-lg-2">
+                                <img src='{{ package.image.url }}' class="img-fluid w-100 h-100 object-fit-cover" alt="">
+                            </div>
+                        {% else %}
+                            <div class="services_img col-lg-5 col-sm-12">
+                                <img src='{{ package.image.url }}' class="img-fluid w-100 h-100 object-fit-cover" alt="">
+                            </div>
+                            <div class="service_content col-lg-7 col-sm-12">
+                                <h4 class="title">{{ package.title }}</h4>
+                                <p>{{ package.description }}</p>
+                                    <br>
+                                <a href="{{ package.booking_link }}" class="main-btn wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.8s">Book Now</a>
+                            </div>
+                        {% endif %}
+                    </div> 
+                </div>
+            {% endfor %}
+            
             
         </div>
     </div>

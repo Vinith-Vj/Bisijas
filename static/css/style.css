@@ -777,11 +777,11 @@ p {
   }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+/* @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .single_slider {
-    /* border-bottom-left-radius: 105px; */
+    border-bottom-left-radius: 105px;
   }
-}
+} */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .single_slider {
@@ -2491,4 +2491,9 @@ figcaption p {
 .service-card {
   background-color: #d2d5d95c !important;
   border-radius: 10px;
+}
+
+
+.carousel-item {
+  height: 100vh; /* Full screen height */
 }

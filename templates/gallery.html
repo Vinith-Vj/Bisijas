@@ -11,14 +11,14 @@
 
 <section class="gallery">
     <div class="container">
-        <div class="row mt-80">
+        {% comment %} <div class="row mt-80">
             <div class="col-lg-6 mb-sm-30">
                 <div class="col-12 p-0 mb-30">
                     <div class="gallery-img-1 effect-milo">
                         <img src="{% static "images/Vietnam.jpeg" %}" alt="">
                         <figcaption>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-							{% comment %} <a href="#">View more</a> {% endcomment %}
+							<a href="#">View more</a>
 						</figcaption>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                             <img src="{% static "images/Bali.jpeg" %}" alt="">
                             <figcaption>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                                {% comment %} <a href="#">View more</a> {% endcomment %}
+                                <a href="#">View more</a>
                             </figcaption>
                         </div>
                     </div>
@@ -37,7 +37,7 @@
                             <img src="{% static "images/Dubai.jpeg" %}" alt="">
                             <figcaption>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                                {% comment %} <a href="#">View more</a> {% endcomment %}
+                                <a href="#">View more</a>
                             </figcaption>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
                             <img src="{% static "images/Bali.jpeg" %}" alt="">
                             <figcaption>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                                {% comment %} <a href="#">View more</a> {% endcomment %}
+                                <a href="#">View more</a>
                             </figcaption>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
                             <img src="{% static "images/Dubai.jpeg" %}" alt="">
                             <figcaption>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                                {% comment %} <a href="#">View more</a> {% endcomment %}
+                                <a href="#">View more</a>
                             </figcaption>
                         </div>
                     </div>
@@ -70,7 +70,7 @@
                         <img src="{% static "images/Vietnam.jpeg" %}" alt="">
                         <figcaption>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                                {% comment %} <a href="#">View more</a> {% endcomment %}
+                                <a href="#">View more</a>
                             </figcaption>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
                         <img src="{% static "images/Vietnam.jpeg" %}" alt="">
                         <figcaption>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-							{% comment %} <a href="#">View more</a> {% endcomment %}
+							<a href="#">View more</a>
 						</figcaption>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                             <img src="{% static "images/Bali.jpeg" %}" alt="">
                             <figcaption>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                                {% comment %} <a href="#">View more</a> {% endcomment %}
+                                <a href="#">View more</a>
                             </figcaption>
                         </div>
                     </div>
@@ -102,7 +102,7 @@
                             <img src="{% static "images/Dubai.jpeg" %}" alt="">
                             <figcaption>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                                {% comment %} <a href="#">View more</a> {% endcomment %}
+                                <a href="#">View more</a>
                             </figcaption>
                         </div>
                     </div>
@@ -116,7 +116,7 @@
                             <img src="{% static "images/Bali.jpeg" %}" alt="">
                             <figcaption>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                                {% comment %} <a href="#">View more</a> {% endcomment %}
+                                <a href="#">View more</a>
                             </figcaption>
                         </div>
                     </div>
@@ -125,7 +125,7 @@
                             <img src="{% static "images/Dubai.jpeg" %}" alt="">
                             <figcaption>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                                {% comment %} <a href="#">View more</a> {% endcomment %}
+                                <a href="#">View more</a>
                             </figcaption>
                         </div>
                     </div>
@@ -135,12 +135,75 @@
                         <img src="{% static "images/Vietnam.jpeg" %}" alt="">
                         <figcaption>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                                {% comment %} <a href="#">View more</a> {% endcomment %}
+                                <a href="#">View more</a>
                             </figcaption>
                     </div>
                 </div>
             </div>
+        </div> {% endcomment %}
+
+
+        <div class="row mt-80">
+            {% for pattern in patterns %}
+                <!-- First Column -->
+                <div class="col-lg-6 mb-sm-30">
+                    {% if pattern.column1|length > 0 %}
+                        <!-- Large Image -->
+                        <div class="col-12 p-0 mb-30">
+                            <div class="gallery-img-1 effect-milo">
+                                <img src="{{ pattern.column1.0.image.url }}" alt="">
+                                <figcaption>
+                                    <p>{{ pattern.column1.0.caption }}</p>
+                                </figcaption>
+                            </div>
+                        </div>
+                    {% endif %}
+                    <!-- Two Smaller Images -->
+                    <div class="row">
+                        {% for img in pattern.column1|slice:"1:3" %}
+                            <div class="col-6">
+                                <div class="gallery-img-2 effect-milo">
+                                    <img src="{{ img.image.url }}" alt="">
+                                    <figcaption>
+                                        <p>{{ img.caption }}</p>
+                                    </figcaption>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+        
+                <!-- Second Column -->
+                <div class="col-lg-6">
+                    <!-- Two Smaller Images -->
+                    <div class="row">
+                        {% for img in pattern.column2|slice:":2" %}
+                            <div class="col-6">
+                                <div class="gallery-img-2 effect-milo">
+                                    <img src="{{ img.image.url }}" alt="">
+                                    <figcaption>
+                                        <p>{{ img.caption }}</p>
+                                    </figcaption>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    {% if pattern.column2|length > 2 %}
+                        <!-- Large Image -->
+                        <div class="col-12 p-0">
+                            <div class="gallery-img-1 effect-milo">
+                                <img src="{{ pattern.column2.2.image.url }}" alt="">
+                                <figcaption>
+                                    <p>{{ pattern.column2.2.caption }}</p>
+                                </figcaption>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
         </div>
+        
+        
 
     </div>
 </section>
