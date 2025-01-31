@@ -116,6 +116,7 @@ p {
   line-height: 24px;
   color: #747E88;
   margin: 0px;
+  text-align: justify !important;
 }
 
 .bg_cover {
@@ -140,16 +141,16 @@ p {
   border: 0;
   padding: 0 40px;
   font-size: 16px;
-  height: 50px;
-  line-height: 50px;
+  height: 40px;
+  line-height: 40px;
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
   z-index: 5;
   -webkit-transition: all 0.4s ease-out 0s;
   transition: all 0.4s ease-out 0s;
-  background-color: #0011ff;
-  width: 170px;
+  background-color: #194cb3;
+  width: 160px;
 }
 
 .main-btn:hover {
@@ -1517,7 +1518,7 @@ p {
 }
 
 .single_blog .blog_content .more:hover {
-  color: #0011ff;
+  color: #1b4eb3;
 }
 
 .single_blog .blog_content_2 {
@@ -1631,7 +1632,7 @@ p {
   width: 100%;
   height: 60px;
   padding: 0 25px;
-  border: 2px solid #DBDBDB;
+  border: 2px solid #184bb2;
   background-color: #fff;
   color: #747E88;
   -webkit-transition: all 0.3s ease-out 0s;
@@ -1644,43 +1645,43 @@ p {
 .single_form input::-webkit-input-placeholder,
 .single_form textarea::-webkit-input-placeholder {
   opacity: 1;
-  color: #DBDBDB;
+  color: #184bb2;
 }
 
 .single_form input:-ms-input-placeholder,
 .single_form textarea:-ms-input-placeholder {
   opacity: 1;
-  color: #DBDBDB;
+  color: #184bb2;
 }
 
 .single_form input::-ms-input-placeholder,
 .single_form textarea::-ms-input-placeholder {
   opacity: 1;
-  color: #DBDBDB;
+  color: #184bb2;
 }
 
 .single_form input::placeholder,
 .single_form textarea::placeholder {
   opacity: 1;
-  color: #DBDBDB;
+  color: #184bb2;
 }
 
 .single_form input::-moz-placeholder,
 .single_form textarea::-moz-placeholder {
   opacity: 1;
-  color: #DBDBDB;
+  color: #184bb2;
 }
 
 .single_form input::-moz-placeholder,
 .single_form textarea::-moz-placeholder {
   opacity: 1;
-  color: #DBDBDB;
+  color: #184bb2;
 }
 
 .single_form input::-webkit-input-placeholder,
 .single_form textarea::-webkit-input-placeholder {
   opacity: 1;
-  color: #DBDBDB;
+  color: #184bb2;
 }
 
 .single_form input:focus,
@@ -1827,7 +1828,7 @@ p {
 }
 
 .footer_link .link li a:hover {
-  color: blue;
+  color: #1b4eb3;
 }
 
 .footer_subscribe p {
@@ -2234,65 +2235,80 @@ figcaption p {
 
 
 
-.fixed-telephone {
-  background-color: #1c6297;
-  border: 2px solid white;
-  border-radius: 50%;
+.fixed-telephone, .fixed-whatsapp {
+  position: fixed;
   width: 60px;
   height: 60px;
-  z-index: 100;
-  position: fixed;
-  bottom: 135px;
-  right: 8px;
-  align-items: center;
+  border-radius: 50%;
   display: flex;
+  align-items: center;
   justify-content: center;
+  z-index: 100;
   animation: pulse 1.5s infinite ease-in-out;
 }
 
-.fa-solid, .fa-phone {
-  font-size: 30px;
-  color: white;
+.fixed-telephone {
+  background-color: #1c6297;
+  border: 2px solid white;
+  bottom: 135px;
+  right: 8px;
 }
 
 .fixed-whatsapp {
   background-color: #25D366;
   border: 2px solid white;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  z-index: 100;
-  position: fixed;
   bottom: 50px;
   right: 8px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  animation: pulse 1.5s infinite ease-in-out;
   transition: transform 0.3s ease-in-out;
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.fa-brands, .fa-whatsapp {
+/* FontAwesome Icons */
+.fa-solid, .fa-phone, .fa-brands, .fa-whatsapp {
   font-size: 30px;
   color: white;
 }
 
+/* Pulse animation */
 @keyframes pulse {
-  0% {
+  0%, 100% {
     transform: scale(1);
-    /* box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); */
   }
   50% {
-    transform: scale(1.1); /* Increase size */
-    /* box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); */
-  }
-  100% {
-    transform: scale(1);
-    /* box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); */
+    transform: scale(1.1);
   }
 }
+
+/* Pulse Wave Effect */
+.fixed-telephone::before,
+.fixed-whatsapp::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 50%;
+  opacity: 0.6;
+  z-index: -1;
+  animation: pulse-wave 1.5s infinite ease-out;
+}
+
+@keyframes pulse-wave {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
 
 
 .vision {
@@ -2452,7 +2468,7 @@ figcaption p {
 .link-loc {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 150px;
   justify-content: space-between;
 }
 
@@ -2467,6 +2483,12 @@ figcaption p {
     flex-direction: row;
     justify-content: space-between;
     gap: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .link-loc {
+    gap: 80px
   }
 }
 
@@ -2496,4 +2518,9 @@ figcaption p {
 
 .carousel-item {
   height: 100vh; /* Full screen height */
+}
+
+
+.posters {
+  row-gap: 30px;
 }
