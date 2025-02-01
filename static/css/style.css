@@ -2493,8 +2493,8 @@ figcaption p {
 }
 
 @media (max-width: 575px) {
-  .links-loc {
-    gap: 50px;
+  .link-loc {
+    gap: 44px;
   }
 }
 
