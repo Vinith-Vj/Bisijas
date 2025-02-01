@@ -2474,7 +2474,7 @@ figcaption p {
   display: flex;
   flex-direction: column;
   margin-top: 30px;
-  
+  padding: 15px;
 }
 
 .link-loc {
