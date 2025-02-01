@@ -70,8 +70,15 @@
                                     {% comment %} <li class="nav-item">
                                         <a class="page-scroll" href="#services">Services</a>
                                     </li> {% endcomment %}
-                                    <li class="nav-item {% if request.path == '/gallery' %}active{% endif %}">
-                                        <a class="page-scroll" href="gallery">Gallery</a>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" id="galleryDropdown" role="button"
+                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Gallery
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="galleryDropdown">
+                                            <a class="dropdown-item" href="gallery">Gallery</a>
+                                            <a class="dropdown-item" href="poster">Posters</a>
+                                        </div>
                                     </li>
                                     {% comment %} <li class="nav-item">
                                         <a class="page-scroll" href="#blog">Blog</a>

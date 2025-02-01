@@ -40,5 +40,8 @@ def gallery(request):
 
     return render(request, "gallery.html", {"patterns": patterns})
 
+def poster(request):
+    return render(request, 'posters.html')
+
 def contact_us(request):
     return render(request, 'contact_us.html')

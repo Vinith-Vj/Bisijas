@@ -2565,3 +2565,14 @@ figcaption p {
   border-radius: 10px;
 }
 
+.dropdown-menu {
+  background-color: transparent;
+}
+
+.dropdown-item:focus, .dropdown-item:hover{
+  background-color: transparent;
+}
+
+.dropdown:hover .dropdown-menu{
+  display: block;
+}
