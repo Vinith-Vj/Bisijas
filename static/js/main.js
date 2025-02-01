@@ -101,13 +101,31 @@ $(function() {
     wow.init();
     
     
+     
     
-    
-    
-    
-    
-    
-    
-    
-    
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    let popup = document.getElementById("imagePopup");
+    let popupImage = document.getElementById("popupImage");
+    let closeBtn = document.querySelector(".popup .close");
+
+    document.querySelectorAll(".pop-image").forEach(img => {
+        img.addEventListener("click", function () {
+            popupImage.src = this.getAttribute("data-src");
+            popup.style.display = "flex"; // Show popup
+        });
+    });
+
+    closeBtn.addEventListener("click", function () {
+        popup.style.display = "none"; // Hide popup
+    });
+
+    popup.addEventListener("click", function (e) {
+        if (e.target !== popupImage) { 
+            popup.style.display = "none"; // Close when clicking outside the image
+        }
+    });
 });
