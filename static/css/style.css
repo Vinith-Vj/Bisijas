@@ -581,7 +581,14 @@ p {
 }
 
 .nav-logo {
-  height: 50px;
+  height: 70px;
+  margin: 10px;
+}
+
+@media (max-width: 575px) {
+  .nav-logo {
+    height: 50px;
+  }
 }
 
 .navbar-nav .nav-item a {
