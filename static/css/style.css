@@ -1749,7 +1749,7 @@ p {
         11.FOOTER css 
 ===========================*/
 .footer_area {
-  background-color: #38424D;
+  background-color: #001e3f;
 }
 
 .footer_about p {
@@ -2461,34 +2461,31 @@ figcaption p {
 
 .links {
   display: flex;
-  flex-direction: row;
-  gap: 83px;
+  flex-direction: column;
+  margin-top: 30px;
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #0000ff17
 }
 
 .link-loc {
   display: flex;
-  flex-direction: column;
-  gap: 150px;
   justify-content: space-between;
+  gap: 95px;
 }
 
 .link-content {
   display: flex;
   gap: 10px;
-  align-items: center;
 }
 
 @media (max-width: 767px) {
-  .links {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 30px;
-  }
+  
 }
 
 @media (max-width: 575px) {
-  .link-loc {
-    gap: 80px
+  .links-loc {
+    gap: 50px;
   }
 }
 
@@ -2524,6 +2521,7 @@ figcaption p {
 .posters {
   row-gap: 30px;
 }
+
 
 
 
