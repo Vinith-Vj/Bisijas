@@ -2494,7 +2494,7 @@ figcaption p {
 
 @media (max-width: 575px) {
   .link-loc {
-    gap: 44px;
+    gap: 40px;
   }
 }
 
@@ -2575,4 +2575,12 @@ figcaption p {
 
 .dropdown:hover .dropdown-menu{
   display: block;
+}
+
+@media (max-width: 767px) {
+  .g-map {
+    padding: 0;
+    height: 300px;
+    margin-top: 30px;
+  }
 }
