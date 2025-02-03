@@ -1466,8 +1466,25 @@ p {
   box-shadow: 0px 0px 22px 0px rgba(173, 206, 243, 0.31);
 }
 
-.single_blog .blog_image img {
+/* .single_blog .blog_image img {
   width: 100%;
+} */
+
+.blog2 {
+  height: 196px;
+  width: 117px;
+}
+
+.blog2 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 575px) {
+  .blog2 {
+    width: 100%;
+  }
 }
 
 .single_blog .blog_content {
@@ -2584,3 +2601,5 @@ figcaption p {
     margin-top: 30px;
   }
 }
+
+
