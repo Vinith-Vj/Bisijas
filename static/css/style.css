@@ -2583,7 +2583,7 @@ figcaption p {
 }
 
 .dropdown-menu {
-  background-color: transparent;
+  background-color: black;
 }
 
 .dropdown-item:focus, .dropdown-item:hover{
