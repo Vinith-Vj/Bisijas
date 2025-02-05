@@ -25,72 +25,74 @@
     </div>
 
     <div class="row mb-30">
-        <div class="contact_form col-lg-6 col-sm-12">
-            <div class="row">
-                    <div class="col-lg-6">
-                        <div class="single_form">
-                            <input type="text" name="name" id="name" placeholder="Name">
-                        </div> <!-- single form -->
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="single_form">
-                            <input type="text" name="phone" id="phone" placeholder="Phone">
-                        </div> <!-- single form -->
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="single_form">
-                            <input type="email" name="email" id="email" placeholder="Email">
-                        </div> <!-- single form -->
-                    </div>
-                    
-                    <div class="col-lg-12">
-                        <div class="single_form">
-                            <textarea name="message" id="message" placeholder="Message"></textarea>
-                        </div> <!-- single form -->
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="single_form">
-                            <button type="submit" class="main-btn d-flex justify-content-center">Send Message</button>
-                        </div> <!-- single form -->
-                    </div>
-
-                    <div class="links">
-                        <div class="link-loc">
-                            <div class="link-content">
-                                <i class="fa-solid fa-location-dot" style="color: black;"></i>
-                                <p>
-                                    Second Floor, Eshal Arcade, Kallumthazham Puliyathumukku Rd, Ayathil, Kollam, Kerala 691021
-                                </p>
-                            </div>
-            
-                            <div class="link-content">
-                                <a href="https://wa.me/9746424213" target="_blank" style="text-decoration: none; color: inherit;">
-                                    <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i>
-                                </a>
-                                <p>
-                                    +919746424213
-                                </p>
-                            </div>
+        <form method="post" action="" class="col-lg-6 col-sm-12">
+            {% csrf_token %}
+            <div class="contact_form ">
+                <div class="row">
+                        <div class="col-lg-6">
+                            <div class="single_form">
+                                <input type="text" name="name" id="name" placeholder="Name">
+                            </div> <!-- single form -->
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="single_form">
+                                <input type="text" name="phone" id="phone" placeholder="Phone">
+                            </div> <!-- single form -->
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="single_form">
+                                <input type="email" name="email" id="email" placeholder="Email">
+                            </div> <!-- single form -->
                         </div>
                         
-                        <div class="link-loc mt-30">
-                            <div class="link-content">
-                                <a href="tel:+918137824212" target="_blank" style="text-decoration: none; color: inherit;">
-                                    <i class="fa-solid fa-phone" style="color: black;"></i>
-                                </a>
-                                <p>+918137824212</p>
+                        <div class="col-lg-12">
+                            <div class="single_form">
+                                <textarea name="message" id="message" placeholder="Message"></textarea>
+                            </div> <!-- single form -->
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="single_form">
+                                <button type="submit" class="main-btn d-flex justify-content-center">Send Message</button>
+                            </div> <!-- single form -->
+                        </div>
+    
+                        <div class="links">
+                            <div class="link-loc">
+                                <div class="link-content">
+                                    <i class="fa-solid fa-location-dot" style="color: black;"></i>
+                                    <p>
+                                        Second Floor, Eshal Arcade, Kallumthazham Puliyathumukku Rd, Ayathil, Kollam, Kerala 691021
+                                    </p>
+                                </div>
+                
+                                <div class="link-content">
+                                    <a href="https://wa.me/9746424213" target="_blank" style="text-decoration: none; color: inherit;">
+                                        <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i>
+                                    </a>
+                                    <p>
+                                        +919746424213
+                                    </p>
+                                </div>
                             </div>
-                            <div class="link-content">
-                                <a href="https://www.instagram.com/bisijasroyaltours?igsh=a3N1OXo1a3d3enQ2" target="_blank" style="text-decoration: none; color: inherit;">
-                                    <i class="fa-brands fa-instagram instagram"></i>
-                                </a>
-                                <p href="https://www.instagram.com/bisijasroyaltours?igsh=a3N1OXo1a3d3enQ2">bisijasroyaltours</p>
+                            
+                            <div class="link-loc mt-30">
+                                <div class="link-content">
+                                    <a href="tel:+918137824212" target="_blank" style="text-decoration: none; color: inherit;">
+                                        <i class="fa-solid fa-phone" style="color: black;"></i>
+                                    </a>
+                                    <p>+918137824212</p>
+                                </div>
+                                <div class="link-content">
+                                    <a href="https://www.instagram.com/bisijasroyaltours?igsh=a3N1OXo1a3d3enQ2" target="_blank" style="text-decoration: none; color: inherit;">
+                                        <i class="fa-brands fa-instagram instagram"></i>
+                                    </a>
+                                    <p href="https://www.instagram.com/bisijasroyaltours?igsh=a3N1OXo1a3d3enQ2">bisijasroyaltours</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-        </div>
-
+            </div>
+        </form>
 
         <div class="col-lg-6 g-map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.879656656411!2d76.6249957!3d8.8907795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05fd70c347996f%3A0xf752d8585f3fa426!2sBisijas%20Royal%20Tours!5e0!3m2!1sen!2sin!4v1736578829642!5m2!1sen!2sin" " style="border:0; height: 100%; width: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -98,6 +100,14 @@
         </div>
         
     </div>
+
+    {% if messages %}
+            <div class="alert-messages">
+                {% for message in messages %}
+                    <div class="alert {{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
 
     {% comment %} <div class="row mt-30 mb-30 g-sm-20 pt-20 pb-20" style="border-top: 1px solid; border-bottom: 1px solid;">
         <div class="col-lg-3 col-sm-6">

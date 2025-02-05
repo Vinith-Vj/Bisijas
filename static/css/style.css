@@ -2522,20 +2522,11 @@ figcaption p {
   border-radius: 10px;
 }
 
-.services-container {
-  flex-wrap: nowrap;
-  gap: 10px;
-}
-
-@media (max-width: 767px) {
-  .services-container {
-    flex-wrap: wrap;
-  }
-}
-
 .service-card {
   background-color: #d2d5d95c !important;
   border-radius: 10px;
+  padding: 10px;
+  height: 500px;
 }
 
 

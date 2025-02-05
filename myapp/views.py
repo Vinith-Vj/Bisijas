@@ -1,5 +1,8 @@
-from django.shortcuts import render
-from .models import Package, Gallery, VideoCarousel, Service
+from django.shortcuts import render, redirect
+from .models import Package, Gallery, VideoCarousel, Service, Poster
+from django.core.mail import send_mail
+from django.contrib import messages
+from django.conf import settings
 
 # Create your views here.
 
@@ -41,7 +44,29 @@ def gallery(request):
     return render(request, "gallery.html", {"patterns": patterns})
 
 def poster(request):
-    return render(request, 'posters.html')
+    posters = Poster.objects.all()
+    return render(request, 'posters.html', {'posters': posters})
 
 def contact_us(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        phone = request.POST.get('phone')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+
+        if name and phone and email and message:
+            subject = f"New Contact Us Message from {name}"
+            full_message = f"Name: {name}\nPhone: {phone}\nEmail: {email}\n\nMessage:\n{message}"
+
+            try:
+                send_mail(subject, full_message, email, [settings.EMAIL_HOST_USER],
+                          fail_silently=False)
+                messages.success(request, 'Your message has been sent successfully!')
+            except Exception as e:
+                 messages.error(request, 'An error occurred while sending your message. Please try again later.')
+        
+        else:
+            message.error(request, 'All Fields are required')
+
+        return redirect('contactus')
     return render(request, 'contact_us.html')

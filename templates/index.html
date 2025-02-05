@@ -363,15 +363,17 @@
             <div class="row g-sm-20 services-container">
 
                 {% for service in services %}
-                    <div class="col-lg-4 col-sm-12 service-card">
-                        <div class="services" data-aos="slide-right" data-aos-duration="1200">
-                            <img src="{{ service.image.url }}" alt="" data-aos="zoom-in" data-aos-duration="800">
-                            
-                            <h4 data-aos='slide-right' data-aos-duration="800">{{ service.title }}</h4>
-                            <p data-aos='slide-right' data-aos-duration="1000"> 
-                                {{ service.description }}
-                            </p>
-                            <a href="packages" class="more" data-aos="fade-left" data-aos-duration="800">Read More</a>
+                    <div class="col-lg-4 col-sm-12 ">
+                        <div class="service-card">
+                            <div class="services" data-aos="slide-right" data-aos-duration="1200">
+                                <img src="{{ service.image.url }}" alt="" data-aos="zoom-in" data-aos-duration="800">
+                                
+                                <h4 data-aos='slide-right' data-aos-duration="800">{{ service.title }}</h4>
+                                <p data-aos='slide-right' data-aos-duration="1000"> 
+                                    {{ service.description }}
+                                </p>
+                                <a href="packages" class="more" data-aos="fade-left" data-aos-duration="800">Read More</a>
+                            </div>
                         </div>
                     </div>
                 {% endfor %}

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Package, Gallery, VideoCarousel, Service
+from .models import Package, Gallery, VideoCarousel, Service, Poster
 
 # Register your models here.
 
@@ -14,3 +14,5 @@ admin.site.register(Gallery)
 admin.site.register(VideoCarousel)
 
 admin.site.register(Service)
+
+admin.site.register(Poster)

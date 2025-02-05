@@ -12,11 +12,9 @@
 <section class="gallery">
     <div class="container">
         <div class="row mt-80 mb-30 posters">
-            <div class="col-12">
-                {% comment %} <h2>Posters</h2> {% endcomment %}
-            </div>
+            
 
-            <div class="col-lg-4 hovers">
+            {% comment %} <div class="col-lg-4 hovers">
                 <div class="poster_img">
                     <img src="{% static "images/gallery_poster1.jpeg" %}" alt="" class="pop-image" data-src="{% static "images/gallery_poster1.jpeg" %}">
                 </div>
@@ -45,12 +43,16 @@
                 <div class="poster_img">
                     <img src="{% static "images/gallery_posters6.jpeg" %}" alt="" class="pop-image" data-src="{% static "images/gallery_posters6.jpeg" %}">
                 </div>
-            </div>
-            <div class="col-lg-4 hovers">
-                <div class="poster_img">
-                    <img src="{% static "images/gallery_posters7.jpeg" %}" alt="" class="pop-image" data-src="{% static "images/gallery_posters7.jpeg" %}">
+            </div> {% endcomment %}
+
+            {% for poster in posters %}
+                <div class="col-lg-4 hovers">
+                    <div class="poster_img">
+                        <img src="{{ poster.image.url }}" alt="{{ poster.title }}" class="pop-image" data-src="{{ poster.image.url }}">
+                    </div>
                 </div>
-            </div>
+            {% endfor %}
+            
         </div>
 
         <!-- Image Popup -->
