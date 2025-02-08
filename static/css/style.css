@@ -854,14 +854,15 @@ p {
 }
 
 .slider_content p {
-  font-size: 18px;
+  font-family: "Josefin Sans", serif;
+  font-size: 26px;
   color: #fff;
   margin-top: 30px;
 }
 
 @media (max-width: 767px) {
   .slider_content p {
-    font-size: 16px;
+    font-size: 23px;
   }
 }
 
@@ -1771,7 +1772,7 @@ p {
         11.FOOTER css 
 ===========================*/
 .footer_area {
-  background-color: #001e3f;
+  background-color: #0914f773;
 }
 
 .footer_about p {
