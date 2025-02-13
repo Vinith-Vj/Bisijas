@@ -2514,6 +2514,11 @@ figcaption p {
   .link-loc {
     gap: 40px;
   }
+
+  .links p {
+    font-size: 14px;
+    text-align: unset !important;
+  }
 }
 
 .contact-img-bottom img {
